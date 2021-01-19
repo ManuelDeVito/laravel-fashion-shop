@@ -16,9 +16,10 @@
                                     Articolo {{ $key + 1 }}
                                 </div>
                                 <ul class="list-group list-group-flush text-center">
-                                    <li class="list-group-item">{{ $dress->Modello }}</li>
-                                    <li class="list-group-item">{{ $dress->Colore }}</li>
-                                    <li class="list-group-item">{{ $dress->Taglia }}</li>
+                                    <li class="list-group-item">{{ 'Modello: ' .$dress->Modello }}</li>
+                                    <li class="list-group-item">{{ 'Colore: ' .$dress->Colore }}</li>
+                                    <li class="list-group-item">{{ 'Taglia: ' .$dress->Taglia }}</li>
+                                    <li class="list-group-item">{{ 'Prezzo: ' .$dress->Prezzo .'€' }}</li>
                                 </ul>
                             </div>
                         </div>
