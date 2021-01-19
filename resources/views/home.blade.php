@@ -8,6 +8,13 @@
                 <h1 class="text-center">
                     {{ $brand }}
                 </h1>
+                <ul class="text-center">
+                    @foreach ($dresses as $dress)
+                        <li>{{ $dress->Modello }}</li>
+                        <li>{{ $dress->Colore }}</li>
+                        <li>{{ $dress->Taglia }}</li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>
