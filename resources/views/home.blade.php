@@ -8,13 +8,22 @@
                 <h1 class="text-center">
                     {{ $brand }}
                 </h1>
-                <ul class="text-center">
-                    @foreach ($dresses as $dress)
-                        <li>{{ $dress->Modello }}</li>
-                        <li>{{ $dress->Colore }}</li>
-                        <li>{{ $dress->Taglia }}</li>
+                <div class="row">
+                    @foreach ($dresses as $key => $dress)
+                        <div class="col-4">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-header text-center">
+                                    Articolo {{ $key + 1 }}
+                                </div>
+                                <ul class="list-group list-group-flush text-center">
+                                    <li class="list-group-item">{{ $dress->Modello }}</li>
+                                    <li class="list-group-item">{{ $dress->Colore }}</li>
+                                    <li class="list-group-item">{{ $dress->Taglia }}</li>
+                                </ul>
+                            </div>
+                        </div>
                     @endforeach
-                </ul>
+                </div>
             </div>
         </div>
     </div>
